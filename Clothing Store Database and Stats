@@ -1,0 +1,15 @@
+-- Create a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO clothing VALUES (1, "shirts", 3, 10, "blue");
+INSERT INTO clothing VALUES (2, "pants", 3, 15, "brown");
+INSERT INTO clothing VALUES (3, "socks", 3, 5, "white");
+INSERT INTO clothing VALUES (4, "hats", 3, 10, "black");
+INSERT INTO clothing VALUES (5, "underwear", 3, 5, "red");
+
+-- Display database ordered by price
+SELECT * FROM clothing ORDER BY price DESC;
+
+-- Selects most expensive item
+SELECT MAX(price) FROM clothing;
