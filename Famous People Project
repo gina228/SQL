@@ -1,0 +1,29 @@
+/**In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists. One of the tables contains a column that relates to the primary key of another table. Has at least one query that does a JOIN.*/
+
+CREATE TABLE actors (
+    id INTEGER PRIMARY KEY,
+    fullname TEXT,
+    age INTEGER);
+
+INSERT INTO actors (fullname, age) VALUES ("Leonardo DiCaprio", 48);
+INSERT INTO actors (fullname, age) VALUES ("Johnny Depp", 59);
+INSERT INTO actors (fullname, age) VALUES ("Pedro Pascal", 87);
+INSERT INTO actors (fullname, age) VALUES ("Brad Pitt", 59);
+INSERT INTO actors (fullname, age) VALUES ("Matthew McConaughey", 53);
+
+CREATE table net_worth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    celeb_id INTEGER,
+    net_worth TEXT);
+    
+INSERT INTO net_worth (celeb_id, net_worth) VALUES (1, "260 million");
+INSERT INTO net_worth (celeb_id, net_worth) VALUES (2, "200 million");
+INSERT INTO net_worth (celeb_id, net_worth) VALUES (3, "10 million");
+INSERT INTO net_worth (celeb_id, net_worth) VALUES (4, "400 million");
+INSERT INTO net_worth (celeb_id, net_worth) VALUES (5, "95 million");
+
+/*Return total net worth for each actor*/
+SELECT actors.fullname, net_worth.net_worth
+FROM actors
+JOIN net_worth
+ON actors.id = net_worth.celeb_id;
