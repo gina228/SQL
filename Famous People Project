@@ -1,4 +1,5 @@
-/**In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists. One of the tables contains a column that relates to the primary key of another table. Has at least one query that does a JOIN.*/
+/**In this project, I made a table with a small set of “famous people”, then made more tables about things they do and joined them to create nice human readable lists. 
+One of the tables contains a column that relates to the primary key of another table. Has at least one query that does a JOIN.**/
 
 CREATE TABLE actors (
     id INTEGER PRIMARY KEY,
